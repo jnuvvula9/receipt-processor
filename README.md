@@ -12,6 +12,7 @@ This Go-based service provides an API for processing receipts. It calculates poi
 2. Navigate to the project directory: `cd receipt-processor`
 
 ## Running the Application
+Please make sure docker daemon is already running before you execute the following commands
 1. Build the Docker image: `docker build -t receipt-processor-app .`
 2. Run the application: `docker run -d -p 8080:63342 receipt-processor-app`
 3. The service is now accessible at `http://localhost:8080`.
@@ -20,4 +21,6 @@ This Go-based service provides an API for processing receipts. It calculates poi
 - To process a receipt, POST JSON data to `http://localhost:8080/receipts/process`.
 - Once a receipt is processed, you can fetch the points gained for that receipt by sending a GET request.
 - You will need the unique ID that was returned when you processed the receipt `http://localhost:8080/receipts/[receipt_id]/points`
+
+- Please note that each receipt is considered as a new receipt and thus a unique identidier is generated
 
