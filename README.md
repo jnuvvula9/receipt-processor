@@ -19,5 +19,5 @@ This Go-based service provides an API for processing receipts. It calculates poi
 ## Using the Application
 - To process a receipt, POST JSON data to `http://localhost:8080/receipts/process`.
 - Once a receipt is processed, you can fetch the points gained for that receipt by sending a GET request.
-- You will need the unique ID that was returned when you processed the receipt http://localhost:8080/receipts/[receipt_id]/points
+- You will need the unique ID that was returned when you processed the receipt `http://localhost:8080/receipts/[receipt_id]/points`
 
